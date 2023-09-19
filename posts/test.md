@@ -1,10 +1,9 @@
 ---
-title: Test post
+title: Submergere revocare utque domino inquit
+tags:
+  - rust
+  - something
 ---
-
-# Submergere revocare utque domino inquit
-
-## Prohibent illa laevisque indigenas metuam
 
 Lorem markdownum mersurum, sagittis noctis aurea: melior tenent. [Dat geri
 incessus](http://www.erat.com/defendite-discedere). [Quae meta

@@ -1,13 +1,19 @@
-import { PostTag } from "@/lib/types";
+import clsx from "clsx";
 import Link from "next/link";
 
 export type TagProps = {
-  tag: PostTag;
+  children: string;
 };
-export function Tag({ tag }: TagProps) {
+export function Tag({ children }: TagProps) {
   return (
-    <span>
-      <Link href={`/posts?tag=${tag.slug}`}>{tag.label}</Link>
+    <span
+      className={clsx(
+        "bg-neutral-1-light dark:bg-neutral-1-dark",
+        "text-text-secondary-light dark:text-text-secondary-dark",
+        "px-4 py-1 rounded-md"
+      )}
+    >
+      <Link href={`/posts?tag=${children}`}>{children}</Link>
     </span>
   );
 }

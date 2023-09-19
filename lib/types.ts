@@ -7,9 +7,5 @@ export type PostMetadata = {
   description: string;
   date: string;
   slug: string;
-  tags: PostTag[];
-};
-export type PostTag = {
-  label: string;
-  slug: string;
+  tags: string[];
 };
