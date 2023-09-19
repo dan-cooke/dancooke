@@ -2,7 +2,7 @@ import clsx from "clsx";
 import Image from "next/image";
 
 export type MeProps = {
-  size: "small" | "normal";
+  size?: "small" | "normal";
 };
 export function Me({ size = "normal" }: MeProps) {
   return (

@@ -11,10 +11,10 @@ export default function PostsLayout({
       <nav className="flex place-items-center  gap-8 mt-32 md:-ml-32">
         <Me size="small" />
         <Link href="/" className="text-2xl text-primary">
-          dancooke.codes
+          Daniel Cooke&apos;s posts
         </Link>
       </nav>
-      <main className="">{children}</main>;
+      <main className="">{children}</main>
     </div>
   );
 }

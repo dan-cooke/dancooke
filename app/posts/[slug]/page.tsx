@@ -1,4 +1,3 @@
-import { Tag } from "@/app/components/tag";
 import { TagRow } from "@/app/components/tag-row";
 import { getPost, getPostSlugs } from "@/lib/posts";
 import ReactMarkdown from "react-markdown";

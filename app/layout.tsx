@@ -1,11 +1,11 @@
 import clsx from "clsx";
 import "./globals.css";
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Inter } from "next/font/google";
 
-const poppins = Poppins({
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700", "900"],
 });
 
 export const metadata: Metadata = {
@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={clsx(
-          poppins.className,
+          inter.className,
           "dark:bg-bg-dark dark:text-text-dark ",
           "bg-bg-light text-text-light",
           "max-w-xs lg:max-w-4xl ml-auto mr-auto"

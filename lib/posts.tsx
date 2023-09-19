@@ -13,16 +13,10 @@ export async function getPostSlugs() {
 
 export async function getOrderedPosts() {
   const slugs = await getPostSlugs();
-  const posts = await Promise.all(
-    slugs.map(async (slug) => {
-      const post = await getPost(slug);
-      return { slug, post };
-    })
-  );
+  const posts = await Promise.all(slugs.map(async (slug) => getPost(slug)));
   return posts.sort((a, b) => {
     return (
-      new Date(b.post.metadata.date).getTime() -
-      new Date(a.post.metadata.date).getTime()
+      new Date(b.metadata.date).getTime() - new Date(a.metadata.date).getTime()
     );
   });
 }
@@ -50,8 +44,16 @@ export async function getPost(slug: string): Promise<Post> {
 
     const { content, data } = matter(file);
 
+    console.log(data);
+
     // Proably a better way to do this
-    return { content, metadata: data } as Post;
+    return {
+      content,
+      metadata: {
+        ...data,
+        slug,
+      },
+    } as Post;
   } catch (e) {
     console.log(e);
     notFound();
