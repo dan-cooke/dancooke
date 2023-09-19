@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Me } from "../components/me";
 
 export default function MainLayout({
   children,
@@ -9,12 +10,7 @@ export default function MainLayout({
   return (
     <div className="mt-8 lg:mt-32">
       <section className="flex flex-col place-items-center ">
-        <div className="w-32 h-32 lg:w-48 lg:h-48 relative block dark:hidden">
-          <Image src="/svg/me_light.svg" fill alt="Daniel Cooke" />
-        </div>
-        <div className="w-32 h-32 lg:w-48 lg:h-48 relative dark:block hidden">
-          <Image src="/svg/me_dark.svg" fill alt="Daniel Cooke" />
-        </div>
+        <Me />
         <h1 className="text-2xl mt-4">Dan Cooke Codes</h1>
         <h2 className="text-text-secondary-light dark:text-text-secondary-dark">
           A blog about software
