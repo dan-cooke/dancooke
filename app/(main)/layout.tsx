@@ -1,9 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export function Hero() {
+export default function MainLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <div>
+    <div className="mt-8 lg:mt-32">
       <section className="flex flex-col place-items-center ">
         <div className="w-32 h-32 lg:w-48 lg:h-48 relative block dark:hidden">
           <Image src="/svg/me_light.svg" fill alt="Daniel Cooke" />
@@ -26,6 +30,7 @@ export function Hero() {
           </li>
         </ul>
       </nav>
+      {children}
     </div>
   );
 }
