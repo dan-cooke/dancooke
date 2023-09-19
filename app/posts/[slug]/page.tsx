@@ -10,7 +10,9 @@ export default async function BlogPost({ params }: BlogPostProps) {
   return (
     <div className="flex flex-col">
       <section className="mb-8">
-        <h1 className="text-6xl font-bold mb-5">{post.metadata.title}</h1>
+        <h1 className="text-2xl md:text-6xl font-bold mb-5">
+          {post.metadata.title}
+        </h1>
         <TagRow tags={post.metadata.tags} />
       </section>
       <article className="prose lg:prose-xl">

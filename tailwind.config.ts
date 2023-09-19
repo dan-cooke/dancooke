@@ -17,7 +17,9 @@ const config: Config = {
       "text-secondary-light": "#565656",
       "text-secondary-dark": "#D1D1D1",
       "neutral-1-light": "#ECECEC",
+      "neutral-2-light": "#D1D1D1",
       "neutral-1-dark": "#434343",
+      "neutral-2-dark": "#565656",
     },
   },
   plugins: [

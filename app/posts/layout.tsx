@@ -8,10 +8,10 @@ export default function PostsLayout({
 }) {
   return (
     <div>
-      <nav className="flex place-items-center  gap-8 mt-32 md:-ml-32">
+      <nav className="flex place-items-center  gap-3 md:gap-8 mt-8 md:mt-32 mb-8 xl:-ml-32">
         <Me size="small" />
-        <Link href="/" className="text-2xl text-primary">
-          Daniel Cooke&apos;s posts
+        <Link href="/" className="text-lg md:text-2xl text-primary">
+          Daniel Cooke
         </Link>
       </nav>
       <main className="">{children}</main>

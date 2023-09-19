@@ -10,7 +10,8 @@ export function Tag({ children }: TagProps) {
       className={clsx(
         "bg-neutral-1-light dark:bg-neutral-1-dark",
         "text-text-secondary-light dark:text-text-secondary-dark",
-        "px-4 py-1 rounded-md"
+        "px-4 py-1 rounded-md",
+        "hover:bg-neutral-2-light dark:hover:bg-neutral-2-dark"
       )}
     >
       <Link href={`/posts?tag=${children}`}>{children}</Link>
