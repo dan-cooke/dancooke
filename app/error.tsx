@@ -14,7 +14,7 @@ export default function Error({ error }: ErrorProps) {
         <h1>Oops</h1>
         <p>Something went wrong</p>
       </div>
-      <Link href="/" className="text-primary underline">
+      <Link href="/" className="text-primary dark:text-primary  underline">
         Go back home
       </Link>
     </div>

@@ -1,7 +1,9 @@
 import clsx from "clsx";
 import "./globals.css";
+import { headers } from "next/headers";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { ThemeToggle } from "./theme-toggle";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -18,8 +20,11 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const headersList = headers();
+
+  const prefersDark = headersList.get("sec-ch-prefers-color-scheme") === "dark";
   return (
-    <html lang="en">
+    <html lang="en" className={clsx(prefersDark && "dark")}>
       <body
         className={clsx(
           inter.className,
@@ -28,6 +33,7 @@ export default function RootLayout({
           "max-w-xs md:max-w-2xl lg:max-w-4xl ml-auto mr-auto"
         )}
       >
+        <ThemeToggle />
         {children}
       </body>
     </html>

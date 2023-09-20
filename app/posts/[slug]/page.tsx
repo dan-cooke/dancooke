@@ -10,12 +10,12 @@ export default async function BlogPost({ params }: BlogPostProps) {
   return (
     <div className="flex flex-col">
       <section className="mb-8">
-        <h1 className="text-2xl md:text-6xl font-bold mb-5">
+        <h1 className="text-2xl md:text-6xl font-bold mb-5 text-text-primary dark:text-text-primary-dark">
           {post.metadata.title}
         </h1>
         <TagRow tags={post.metadata.tags} />
       </section>
-      <article className="prose lg:prose-xl">
+      <article className="prose lg:prose-xl dark:prose-invert">
         <ReactMarkdown>{post.content}</ReactMarkdown>
       </article>
     </div>

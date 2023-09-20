@@ -17,7 +17,12 @@ export function PostCard({ post }: PostCardProps) {
         <span className="text-text-secondary-light dark:text-text-secondary-dark">
           {formatDate(post.metadata.date)}
         </span>
-        <h3 className="text-2xl font-bold group-hover:underline group-hover:text-primary">
+        <h3
+          className={clsx(
+            "text-2xl font-bold group-hover:underline group-hover:text-primary-dark group-hover:text-primary dark:text-text-primary-dark  text-text-primary-light ",
+            "dark:text-text-primary dark:text-primary-dark dark:text-primary-dark-dark"
+          )}
+        >
           {post.metadata.title}
         </h3>
         <p className="text-text-secondary-light dark:text-text-secondary-dark text-ellipsis line-clamp-2 mb-4">

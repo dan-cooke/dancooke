@@ -2,7 +2,7 @@ import clsx from "clsx";
 import Link from "next/link";
 
 const AboutLink = (props: JSX.IntrinsicElements["a"]) => (
-  <a {...props} className="underline text-primary" />
+  <a {...props} className="underline text-primary dark:text-primary-dark" />
 );
 export default function About() {
   return (
@@ -24,7 +24,10 @@ export default function About() {
       <p>
         In my sparetime I am constantly hacking and reading about auxiliary
         technologies{" "}
-        <Link href="/reading-list" className="underline text-primary">
+        <Link
+          href="/reading-list"
+          className="underline text-primary dark:text-primary-dark"
+        >
           (check out my reading list){" "}
         </Link>
         , I have worked on several open source projects, like{" "}
@@ -44,7 +47,7 @@ export default function About() {
         My heart lies with{" "}
         <AboutLink
           href="https://www.rust-lang.org/"
-          className="underline text-primary"
+          className="underline text-primary dark:text-primary-dark"
         >
           Rust
         </AboutLink>
