@@ -1,12 +1,12 @@
 import { TagRow } from "@/app/components/tag-row";
-import { getPost, getPostSlugs } from "@/lib/posts";
+import { postFiles } from "@/lib/posts";
 import ReactMarkdown from "react-markdown";
 
 type BlogPostProps = {
   params: { slug: string };
 };
 export default async function BlogPost({ params }: BlogPostProps) {
-  const post = await getPost(params.slug);
+  const post = await postFiles.get(params.slug);
   return (
     <div className="flex flex-col">
       <section className="mb-8">
@@ -22,5 +22,9 @@ export default async function BlogPost({ params }: BlogPostProps) {
   );
 }
 export async function generateStaticParams() {
-  return (await getPostSlugs()).map((slug) => ({ slug }));
+  const slugs = await postFiles.getSlugs();
+
+  return slugs.map((slug) => ({
+    slug,
+  }));
 }

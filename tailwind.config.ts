@@ -8,6 +8,21 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    extend: {
+      animation: {
+        "fade-in": "fade-in 0.5s ease-out",
+      },
+      keyframes: {
+        "fade-in": {
+          "0%": {
+            opacity: "0",
+          },
+          "100%": {
+            opacity: "1",
+          },
+        },
+      },
+    },
     colors: {
       "bg-light": "#FCFCFC",
       "bg-dark": "#1e1e1e",
