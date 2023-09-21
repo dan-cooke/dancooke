@@ -10,7 +10,7 @@ export default async function Posts() {
   return (
     <div>
       {posts.map((post) => (
-        <PostCard key={post.metadata.slug} post={post} />
+        <PostCard key={post.metadata.slug} post={post.metadata} />
       ))}
     </div>
   );

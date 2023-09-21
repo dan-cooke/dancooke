@@ -9,7 +9,7 @@ export default async function Home() {
   return (
     <main className="dark:bg-bg-dark bg-bg-light flex flex-col place-items-center mt-16">
       {posts.map((post) => (
-        <PostCard key={post.metadata.slug} post={post} />
+        <PostCard key={post.metadata.slug} post={post.metadata} />
       ))}
     </main>
   );
