@@ -15,7 +15,7 @@ export default async function BlogPost({ params }: BlogPostProps) {
         </h1>
         <TagRow tags={post.metadata.tags} />
       </section>
-      <article className="prose lg:prose-xl dark:prose-invert">
+      <article className="prose lg:prose-xl dark:prose-invert prose-main">
         <ReactMarkdown>{post.content}</ReactMarkdown>
       </article>
     </div>

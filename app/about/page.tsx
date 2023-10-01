@@ -1,67 +1,47 @@
 import clsx from "clsx";
 import Link from "next/link";
 
-const AboutLink = (props: JSX.IntrinsicElements["a"]) => (
-  <a {...props} className="underline text-primary dark:text-primary-dark" />
-);
 export default function About() {
   return (
-    <div className={clsx("flex flex-col gap-4 fade-in")}>
-      <p className="md:text-4xl font-bold">About me</p>
+    <div
+      className={clsx(
+        "flex flex-col gap-4 fade-in",
+        "text-text-primary-light dark:text-text-primary-dark",
+        "prose md:prose-lg lg:prose-xl dark:prose-invert prose-main",
+      )}
+    >
+      <h2 id="about">❓About me</h2>
       <p>
-        I'm a software engineer from Ireland who likes to travel quite a bit -
-        I'm currently taking a bit of a break from paid work to build some
-        personal projects and travel around Europe in my van 🚐. But I'm always
-        open to new opportunities, so feel free to reach out!
+        I'm a software engineer from a small seaside town in Ireland. Although
+        I'm hoping to move to Amsterdam very soon.
+      </p>
+      <p>
+        I've been writing computer programs for over 10 years now, my first
+        language was Pascal, but throughout school and university I explored
+        many different paradigms from Java to Prolog to Assembly.
       </p>
       <p>
         My "professional" experience is in web development, I have been working
-        in-depth with <AboutLink href="https://reactjs.org/">React</AboutLink>{" "}
-        frontends and <AboutLink href="https://nodejs.org/en">Node</AboutLink>{" "}
-        backends for the past 6-7 years. Working with a variety of Database
-        technologies, MongoDB, Postgres, Redis, DynamoDB, etc.
+        in-depth with <a href="https://reactjs.org/">React</a> frontends and{" "}
+        <a href="https://nodejs.org/en">Node</a> backends for the past 6-7
+        years.
       </p>
       <p>
-        In my sparetime I am constantly hacking and reading about auxiliary
-        technologies{" "}
-        <Link
-          href="/reading-list"
-          className="underline text-primary dark:text-primary-dark"
-        >
-          (check out my reading list){" "}
-        </Link>
-        , I have worked on several open source projects, like{" "}
-        <AboutLink href="https://github.com/dan-cooke/remix-sse">
-          remix-sse
-        </AboutLink>{" "}
-        and most recently{" "}
-        <AboutLink href="https://github.com/dan-cooke/omni">omni</AboutLink>.
-      </p>
-
-      <p>
-        I recently founded a small startup called{" "}
-        <AboutLink href="https://joinwillow.co.uk">Willow</AboutLink> our goal
-        is to make investing eco-friendly and easy for everyone. 🌳
+        I cut my teeth at IBM where I learnt from some fantastic engineers,
+        since then I have worked as a consultant for startups of various sizes
+        helping them build their products, and scale their teams.
       </p>
       <p>
-        My heart lies with{" "}
-        <AboutLink
-          href="https://www.rust-lang.org/"
-          className="underline text-primary dark:text-primary-dark"
-        >
-          Rust
-        </AboutLink>
-        🦀 though. For years I have been trying to find a way to use it in my
-        day-to-day work, but it's not always possible. So that's why I am taking
-        some time off to work on Omni. A WASM based IDL for generating
-        Client/Server code written in Rust. It will be 99% a learning experience
-        for me, but I will be posting about my journey on this blog.
+        Recently I have been toying around with Rust, and I will be using this
+        blog as a bit of a learning journal.
       </p>
-      <p className="md:text-3xl font-bold mt-8">Tech Cloud</p>
+      <h2 id="tech-cloud">☁️ Tech Cloud</h2>
       <p>
         Here is a little word cloud generated from the skills I have listed in
         my previous work experience posts.
       </p>
+
+      <h2 id="open-source">📖 Open Source work</h2>
     </div>
   );
 }

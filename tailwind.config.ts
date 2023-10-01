@@ -22,12 +22,21 @@ const config: Config = {
           },
         },
       },
+
+      typography: (theme) => ({
+        main: {
+          css: {
+            "--tw-prose-links": theme("colors.primary"),
+            "--tw-prose-invert-links": theme("colors.primary-dark"),
+          },
+        },
+      }),
     },
     colors: {
       "bg-light": "#FCFCFC",
       "bg-dark": "#1d212b",
-      primary: "#32BC50",
-      "primary-dark": "#448852",
+      primary: "#FD9011",
+      "primary-dark": "#E07C52",
       "text-primary-light": "#070101",
       "text-primary-dark": "#FEFEFE",
       "text-secondary-light": "#565656",
