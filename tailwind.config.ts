@@ -23,7 +23,7 @@ const config: Config = {
         },
       },
 
-      typography: (theme) => ({
+      typography: (theme: any) => ({
         main: {
           css: {
             "--tw-prose-links": theme("colors.primary"),
