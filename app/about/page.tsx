@@ -1,5 +1,4 @@
 import clsx from "clsx";
-import Link from "next/link";
 
 export default function About() {
   return (
@@ -12,13 +11,10 @@ export default function About() {
     >
       <h2 id="about">❓About me</h2>
       <p>
-        I'm a software engineer from a small seaside town in Ireland. Although
-        I'm hoping to move to Amsterdam very soon.
-      </p>
-      <p>
-        I've been writing computer programs for over 10 years now, my first
-        language was Pascal, but throughout school and university I explored
-        many different paradigms from Java to Prolog to Assembly.
+        I'm a software engineer from a small seaside town in Ireland. I've been
+        writing computer programs for over 10 years now, my first language was
+        Pascal, but throughout school and university I explored many different
+        paradigms from Java to Prolog to Assembly.
       </p>
       <p>
         My "professional" experience is in web development, I have been working
