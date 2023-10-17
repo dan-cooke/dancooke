@@ -17,7 +17,7 @@ export class MarkdownDirectory<T> {
   }
 
   async getSlugs() {
-    const files = await fs.readdir(path.join(process.cwd(), "posts"), {
+    const files = await fs.readdir(path.join(process.cwd(), this.dir), {
       encoding: "utf8",
     });
     return files.map((file) => file.replace(/\.md$/, ""));
@@ -47,14 +47,17 @@ export class MarkdownDirectory<T> {
         path.join(process.cwd(), this.dir, `${slug}.md`),
         {
           encoding: "utf8",
-        }
+        },
       );
 
       const { content, data } = matter(file);
 
+      // extract the PREVIEW_END markers and put it into content preview
+
       // Proably a better way to do this
       return {
-        content,
+        content: content.replace("<!-- PREVIEW_END -->", ""),
+        contentPreview: content.split("<!-- PREVIEW_END -->")[0],
         metadata: {
           ...data,
           slug,

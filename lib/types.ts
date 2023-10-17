@@ -1,5 +1,6 @@
 export type Mattered<T> = {
   metadata: T;
+  contentPreview: string;
   content: string;
 };
 
@@ -12,8 +13,9 @@ export type PostMetadata = {
 };
 
 export type JobMetadata = {
-  title: string;
-  description: string;
+  company: string;
+  role: string;
+  logoUrl: string;
   startDate: Date;
   endDate?: Date;
   slug: string;
