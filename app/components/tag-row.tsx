@@ -5,10 +5,8 @@ export type TagRowProps = {
 };
 export function TagRow({ tags }: TagRowProps) {
   return (
-    <div className="flex flex-row h-8 gap-3">
-      {tags?.map((tag) => (
-        <Tag key={tag}>{tag}</Tag>
-      ))}
+    <div className="flex flex-row flex-wrap gap-3">
+      {tags?.map((tag) => <Tag key={tag}>{tag}</Tag>)}
     </div>
   );
 }

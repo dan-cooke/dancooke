@@ -7,9 +7,11 @@ endDate: 2021-04-01
 skills:
   - React
   - NextJS
+  - NodeJS
   - Cypress
   - Docker
-  - rust
+  - GraphQL
+  - Rust
 ---
 
 IBM was my first major role after graduating from university, and what a learning experience it was. I was surrounded by some incredible engineers, on the QRadar UI team.

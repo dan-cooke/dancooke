@@ -13,15 +13,15 @@ export type JobCardProps = {
 };
 export function JobCard({ job }: JobCardProps) {
   return (
-    <div className="p-6 flex flex-col">
+    <div className="flex flex-col">
       <section className="mb-8">
         <div className="flex gap-8 mb-8">
-          <div className="relative w-32 h-32 rounded-full">
+          <div className="relative w-16 h-16 lg:w-32 lg:h-32 rounded-full">
             <Image
               src={job.metadata.logoUrl}
               alt={job.metadata.company}
               fill
-              className="rounded-xl object-cover"
+              className="rounded-xl object-fill aspect-square"
             />
           </div>
 

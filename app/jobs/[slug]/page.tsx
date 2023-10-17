@@ -13,7 +13,7 @@ export default async function JobPost({ params }: JobPostProps) {
     <div className="flex flex-col">
       <section className="mb-8">
         <div className="flex gap-8 mb-8">
-          <div className="relative w-32 h-32 rounded-full">
+          <div className="relative w-16 h-16 lg:w-32 lg:h-32 rounded-full">
             <Image
               src={post.metadata.logoUrl}
               alt={post.metadata.company}

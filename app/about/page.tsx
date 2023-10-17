@@ -5,7 +5,7 @@ import { JobCard } from "./job-card";
 export default async function About() {
   const jobs = await jobFiles.listOrdered(
     (job1, job2) =>
-      Number(job1.metadata.startDate) - Number(job2.metadata.startDate),
+      Number(job2.metadata.endDate) - Number(job1.metadata.endDate),
   );
   return (
     <>
@@ -56,7 +56,7 @@ export default async function About() {
         <h2 id="open-source">💻 Where I've worked</h2>
       </div>
 
-      <div className="w-full">
+      <div className="w-full flex flex-col gap-4 mt-8">
         {jobs.map((job) => (
           <JobCard key={job.metadata.company} job={job} />
         ))}
