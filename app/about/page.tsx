@@ -11,17 +11,30 @@ export default async function About() {
     <>
       <div
         className={clsx(
-          "flex flex-col gap-4 fade-in",
+          "flex flex-col  fade-in",
           "text-text-primary-light dark:text-text-primary-dark",
+          "pt-8",
           "prose md:prose-lg lg:prose-xl dark:prose-invert prose-main",
         )}
       >
-        <h2 id="about">❓About me</h2>
+        <h2 id="about">About me</h2>
         <p>
           I'm a software engineer from a small seaside town in Ireland. I've
           been writing computer programs for over 10 years now, my first
-          language was Pascal, but throughout school and university I explored
-          many different paradigms from Java to Prolog to Assembly.
+          language was{" "}
+          <a href="https://en.wikipedia.org/wiki/Pascal_(programming_language)">
+            Pascal
+          </a>
+          , but throughout school and university I explored many different
+          paradigms from{" "}
+          <a href="https://en.wikipedia.org/wiki/Java_(programming_language)">
+            Java
+          </a>{" "}
+          to <a href="https://en.wikipedia.org/wiki/Prolog">Prolog</a> to{" "}
+          <a href="https://en.wikipedia.org/wiki/X86_assembly_language">
+            x86 Assembly
+          </a>
+          .
         </p>
         <p>
           My "professional" experience is in web development, I have been
@@ -29,13 +42,7 @@ export default async function About() {
           frontends and <a href="https://nodejs.org/en">Node</a> backends for
           the past 6-7 years.
         </p>
-        <h2 id="tech-cloud">☁️ Tech Cloud</h2>
-        <p>
-          Here is a little word cloud generated from the skills I have listed in
-          my previous work experience posts.
-        </p>
-
-        <h2 id="open-source">📖 Open Source work</h2>
+        <h2 id="open-source">Open Source work</h2>
 
         <ul>
           <li>
@@ -53,12 +60,22 @@ export default async function About() {
             </a>
           </li>
         </ul>
-        <h2 id="open-source">💻 Where I've worked</h2>
+        <h2 id="open-source" style={{ pageBreakBefore: "always" }}>
+          Where I've worked
+        </h2>
       </div>
 
-      <div className="w-full flex flex-col gap-4 mt-8">
-        {jobs.map((job) => (
-          <JobCard key={job.metadata.company} job={job} />
+      <div className="w-full flex flex-col gap-16 mt-8  print:gap-8">
+        {jobs.map((job, index) => (
+          <>
+            <JobCard key={job.metadata.company} job={job} />
+            {index !== jobs.length - 1 && (
+              <div
+                className="h-[1px] bg-neutral-2-light dark:bg-neutral-2-dark w-full "
+                style={{ pageBreakBefore: "always" }}
+              />
+            )}
+          </>
         ))}
       </div>
     </>

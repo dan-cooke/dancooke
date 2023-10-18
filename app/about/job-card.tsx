@@ -29,7 +29,7 @@ export function JobCard({ job }: JobCardProps) {
             <h3 className="text-text-secondary-light dark:text-text-secondary-dark">
               {job.metadata.role}
             </h3>
-            <h1 className="text-2xl md:text-6xl font-bold mb-5 text-text-primary dark:text-text-primary-dark">
+            <h1 className="text-2xl md:text-4xl font-bold mb-5 text-text-primary dark:text-text-primary-dark">
               {job.metadata.company}
             </h1>
             <h3 className="text-text-secondary-light dark:text-text-secondary-dark">
@@ -47,7 +47,7 @@ export function JobCard({ job }: JobCardProps) {
       >
         <ReactMarkdown>{job.contentPreview}</ReactMarkdown>
       </section>
-      <Button className="py-3 ml-auto">
+      <Button className="py-3 ml-auto print:hidden">
         <Link
           href={`/jobs/${job.metadata.slug}`}
           className="flex place-items-center place-content-end"

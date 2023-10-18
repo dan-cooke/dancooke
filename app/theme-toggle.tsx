@@ -36,11 +36,10 @@ const themeFromString = (value: string) => {
 };
 
 export function ThemeToggle({ theme = Theme.Light }: ThemeToggleProps) {
-  console.log(theme);
   return (
     <div
       className={clsx(
-        "w-full flex place-content-end mt-3",
+        "w-full flex place-content-end mt-3 print:hidden",
         "text-text-secondary-light",
         "dark:text-text-secondary-dark",
         "text-sm",

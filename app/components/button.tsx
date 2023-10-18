@@ -12,6 +12,9 @@ export function Button({ children, className }: ButtonProps) {
         "hover:bg-neutral-2-light dark:hover:bg-neutral-2-dark",
         className,
       )}
+      style={{
+        printColorAdjust: "exact",
+      }}
     >
       {children}
     </button>
