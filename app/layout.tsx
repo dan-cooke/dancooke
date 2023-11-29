@@ -28,6 +28,7 @@ export default async function RootLayout({
         className={clsx(
           inter.className,
           "dark:bg-bg-dark dark:text-text-dark ",
+          "print:text-xs",
           "bg-bg-light text-text-light",
           "max-w-xs md:max-w-2xl lg:max-w-4xl ml-auto mr-auto print:max-w-none",
         )}

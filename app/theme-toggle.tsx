@@ -5,7 +5,6 @@ import clsx from "clsx";
 import { IoCheckmark, IoMoon, IoSettings, IoSunny } from "react-icons/io5";
 import { setTheme } from "./actions";
 import { Fragment } from "react";
-import { BiSolidCheckCircle } from "react-icons/bi";
 
 const themeOptions = [
   { name: "Light", value: "light", icon: <IoSunny /> },

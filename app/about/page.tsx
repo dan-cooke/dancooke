@@ -1,6 +1,7 @@
 import { jobFiles } from "@/lib/jobs";
 import clsx from "clsx";
 import { JobCard } from "./job-card";
+import { SkillRadar } from "../components/skill-radar";
 
 export default async function About() {
   const jobs = await jobFiles.listOrdered(
@@ -14,7 +15,7 @@ export default async function About() {
           "flex flex-col  fade-in",
           "text-text-primary-light dark:text-text-primary-dark",
           "pt-8",
-          "prose md:prose-lg lg:prose-xl dark:prose-invert prose-main",
+          "prose md:prose-lg lg:prose-xl dark:prose-invert prose-main print:prose-sm",
         )}
       >
         <h2 id="about">About me</h2>
@@ -60,6 +61,9 @@ export default async function About() {
             </a>
           </li>
         </ul>
+
+        <h2>Skill Breakdown</h2>
+        <SkillRadar />
         <h2 id="open-source" style={{ pageBreakBefore: "always" }}>
           Where I've worked
         </h2>
